@@ -1,0 +1,188 @@
+# PROJECT 1: DATA CLEANING & PREPARATION
+
+**Organization:** DecodeLabs  
+**Project Domain:** Data Analytics  
+**Project Title:** Data Cleaning and Preparation Using Python  
+**Tools Used:** Python, Pandas, VS Code, Microsoft Excel
+
+---
+
+## 1. INTRODUCTION
+
+Data cleaning is an important step in the data analytics process. Raw datasets may contain missing values, duplicate records, incorrect data formats, and inconsistent information.
+
+The main objective of this project is to clean and prepare a given dataset using Python and the Pandas library. The dataset is examined, cleaned, validated, and exported into a new Excel file for further analysis.
+
+## 2. OBJECTIVES
+
+The objectives of this project are:
+
+- To understand and inspect the given dataset.
+- To identify and handle missing values.
+- To detect duplicate records.
+- To validate unique order IDs.
+- To convert date columns into the correct date format.
+- To validate numerical values and calculations.
+- To export the cleaned dataset into an Excel file.
+
+## 3. DATASET DESCRIPTION
+
+The dataset used in this project contains order-related information.
+
+**Dataset Details:**
+
+- Total Records: 1,200
+- Total Columns: 14
+- File Format: Excel (.xlsx)
+
+**Columns in the Dataset:**
+
+1. OrderID
+2. Date
+3. CustomerID
+4. Product
+5. Quantity
+6. UnitPrice
+7. ShippingAddress
+8. PaymentMethod
+9. OrderStatus
+10. TrackingNumber
+11. ItemsInCart
+12. CouponCode
+13. ReferralSource
+14. TotalPrice
+
+## 4. TOOLS AND TECHNOLOGIES
+
+**Python:** Used for implementing data cleaning operations.
+
+**Pandas:** Used for reading, inspecting, cleaning, and validating the dataset.
+
+**VS Code:** Used as the development environment for writing and executing Python code.
+
+**Microsoft Excel:** Used to view the original and cleaned datasets.
+
+## 5. DATA CLEANING AND PREPARATION PROCESS
+
+### Step 1: Importing Libraries
+
+The required Python libraries were imported to perform data manipulation and read the Excel dataset.
+
+### Step 2: Loading the Dataset
+
+The Excel dataset was loaded into a Pandas DataFrame. The dataset structure, column names, data types, and number of records were inspected.
+
+### Step 3: Identifying Missing Values
+
+Missing values were identified using Pandas.
+
+The initial inspection showed that the CouponCode column contained 309 missing values. All other columns had zero missing values.
+
+**Action Taken:** The missing CouponCode values were replaced with "No Coupon" to indicate that no coupon code was available for those records.
+
+### Step 4: Checking Duplicate Records
+
+The dataset was checked for completely duplicated rows and duplicate OrderID values.
+
+**Results:**
+- Duplicate rows: 0
+- Duplicate OrderIDs: 0
+
+No duplicate records were found, so no rows needed to be removed.
+
+Repeated CustomerID values were retained because a customer may place multiple orders.
+
+### Step 5: Date Format Validation
+
+The Date column was converted into a proper datetime format.
+
+The dataset was checked for invalid date values.
+
+**Result:** 0 invalid dates were found.
+
+### Step 6: Numerical Data Validation
+
+The numerical columns were examined to ensure that their values were valid.
+
+The TotalPrice column was checked by comparing it with the calculated value:
+
+**TotalPrice = Quantity × UnitPrice**
+
+The comparison was performed after rounding values to two decimal places.
+
+**Results:**
+- Correct records: 1,200
+- Incorrect records: 0
+
+### Step 7: Exporting the Cleaned Dataset
+
+After completing the cleaning and validation process, the cleaned DataFrame was exported into a new Excel file named:
+
+**cleaned_dataset.xlsx**
+
+The output file is intended to be saved inside the Cleaned_Data folder.
+
+## 6. BEFORE AND AFTER CLEANING SUMMARY
+
+| Validation | Before Cleaning | After Cleaning |
+|---|---:|---:|
+| Total Records | 1,200 | 1,200 |
+| Missing CouponCode Values | 309 | 0 |
+| Missing Values in Other Columns | 0 | 0 |
+| Duplicate Rows | 0 | 0 |
+| Duplicate OrderIDs | 0 | 0 |
+| Invalid Dates | 0 | 0 |
+| Correct TotalPrice Records | 1,200 | 1,200 |
+| Incorrect TotalPrice Records | 0 | 0 |
+
+## 7. FINAL VALIDATION
+
+After performing the data cleaning operations, the dataset was checked again to ensure that the required conditions were satisfied.
+
+The final validation confirmed:
+
+- No missing values remained.
+- No duplicate OrderIDs were present.
+- No invalid dates were found.
+- All 1,200 TotalPrice records matched the calculated values.
+- The dataset retained all 1,200 records.
+
+## 8. SCREENSHOTS / PROJECT EVIDENCE
+
+The following screenshots should be included as evidence of project completion:
+
+**Screenshot 1: Python Code**
+
+Insert a screenshot showing the Python code used for data cleaning.
+
+**Screenshot 2: Missing Values and Duplicate Validation**
+
+Insert a screenshot showing the output of missing-value and duplicate checks.
+
+**Screenshot 3: Date and Numerical Validation**
+
+Insert a screenshot showing the date validation and TotalPrice verification results.
+
+**Screenshot 4: Cleaned Excel Dataset**
+
+Insert a screenshot of the cleaned_dataset.xlsx file opened in Microsoft Excel.
+
+**Screenshot 5: Successful Export**
+
+Insert a screenshot showing the successful export message in the VS Code terminal.
+
+## 9. CONCLUSION
+
+This project provided practical experience in data cleaning and preparation using Python and Pandas.
+
+The dataset was inspected, missing values were handled, duplicate records were checked, date formats were validated, and numerical calculations were verified.
+
+The final dataset contains 1,200 records with no missing values, duplicate OrderIDs, or invalid dates. All TotalPrice records were also successfully validated.
+
+This project improved my understanding of data preprocessing, data validation, and the importance of maintaining data quality before performing further analysis.
+
+---
+
+**Project:** Data Cleaning & Preparation  
+**Organization:** DecodeLabs  
+**Submission Date:** 07-11-2026
